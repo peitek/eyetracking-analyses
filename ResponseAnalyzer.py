@@ -3,14 +3,14 @@ from os.path import join, isfile
 import math
 import os
 
-from config import PATH_DATA_RAW, PATH_DATA_PREPROCESSED, PATH_DATA_OUTPUT
+from config import PATH_DATA_RAW, PATH_DATA_OUTPUT
 
 # TODO move this file into a separate project
 # TODO remove hard-coded conditions
 # TODO extract d2 conditions?
 
 
-def main():
+def analyze_responses():
     # read all files from input directory and loop through them
     only_files = [f for f in os.listdir(join(PATH_DATA_RAW)) if isfile(join(PATH_DATA_RAW, f))]
 
@@ -692,4 +692,4 @@ def write_line_for_condition(output_file, participant_name, conditions, name):
         output_file.write("" if len(summary["click_times"]) < 5 else str(summary["click_times"][4]))
 
 
-main()
+if __name__ == "__main__": analyze_responses()

@@ -2,9 +2,8 @@ from os.path import join
 
 import _pickle as pickle
 
-from config import PATH_DATA_RAW, PATH_DATA_PREPROCESSED, PATH_DATA_OUTPUT
+from config import PATH_DATA_PREPROCESSED, PATH_DATA_OUTPUT, PARTICIPANTS
 
-# TODO remove participant codes
 # TODO remove required response log file
 # TODO remove required physio log file
 # TODO generalize code better (e.g., conditions)
@@ -15,9 +14,7 @@ fixation_cross_x = 640
 fixation_cross_y = 514
 
 
-def main():
-    participants = ["bo23", "ea65", "ia67", "ks01", "mk55", "qe90", "qw51","zp65"]
-
+def analyze_rest_condition_offset(participants):
     all_fixations_x_per_rest_condition = [[[],[],[],[],[],[],[],[]] for i in range(26)]
     all_fixations_y_per_rest_condition = [[[],[],[],[],[],[],[],[]] for i in range(26)]
 
@@ -227,4 +224,4 @@ def write_averages_to_csv_file(results_x, results_y, weighted):
     print("-> saving file: done!")
 
 
-main()
+if __name__ == "__main__": analyze_rest_condition_offset(PARTICIPANTS)

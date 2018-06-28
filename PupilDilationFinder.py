@@ -3,22 +3,16 @@ from os.path import join
 import _pickle as pickle
 import re
 
-from config import PATH_DATA_RAW, PATH_DATA_PREPROCESSED, PATH_DATA_OUTPUT
+from config import PATH_DATA_PREPROCESSED, PARTICIPANTS
 
-# TODO remove participant codes
 # TODO clean up code
 # TODO comment/document functions
 
 trial = 0
 workaround_for_pilot_zp65 = False
 
-participants = ["bo23", "ea65", "ia67", "jw13", "ks01", "mk55", "qe90", "qw51", "zp65"]
-#participants = ["on85","qv57"]
 
-#participants = ["ks01"]
-
-
-def main():
+def extract_pupil_dilation_for_participants(participants):
     print("\nParse eyetracking data...")
 
     global trial
@@ -155,7 +149,7 @@ def main():
         print("-> reading file: done!")
 
         # write fixations to file
-        with open(join(PATH_DATA_PREPROCESSED, "fixations", participant + "_pupil_data_raw.pkl"), 'wb') as output:
+        with open(join(PATH_DATA_PREPROCESSED, "pupil_dilation", participant + "_pupil_data_raw.pkl"), 'wb') as output:
             pickle.dump(pupil_dilation, output)
 
         print("-> writing file: done!")
@@ -168,4 +162,5 @@ def is_number(s):
     except ValueError:
         return False
 
-main()
+
+if __name__ == "__main__": extract_pupil_dilation_for_participants(PARTICIPANTS)

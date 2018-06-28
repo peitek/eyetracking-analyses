@@ -3,23 +3,13 @@ import math
 import numpy
 import _pickle as pickle
 
-from config import PATH_DATA_RAW, PATH_DATA_PREPROCESSED, PATH_DATA_OUTPUT
+from config import PATH_DATA_PREPROCESSED, PATH_DATA_OUTPUT, PARTICIPANTS
 
-# TODO remove participant codes
 # TODO remove required response log file
 # TODO remove required physio log file
 # TODO generalize code better (e.g., conditions)
 # TODO clean up code
 # TODO comment/document functions
-
-
-def main():
-    #participants = ["bo23", "ea65", "ia67", "ks01", "mk55", "on85", "qe90", "qw51", "qv57", "zp65"]
-    participants = ["bo23", "ea65", "ia67", "ks01", "mk55", "qe90", "qw51", "zp65"]
-    #participants = ["ks01"]
-
-    analyze_pupil_dilation_for_all_participants(participants)
-    #analyze_pupil_dilation_movement_for_all_participants(participants)
 
 
 def analyze_pupil_dilation_movement_for_all_participants(participants):
@@ -264,4 +254,4 @@ def set_snippet_to_data(et_frame, pupil_dilation_dict, trial_category):
         pupil_dilation_dict[trial_category][snippet][grouped_frame_100].append(math.floor(float(et_frame["pupil_dilation"])))
 
 
-main()
+if __name__ == "__main__": analyze_pupil_dilation_for_all_participants(PARTICIPANTS)

@@ -5,7 +5,6 @@ import re
 
 from config import PATH_DATA_RAW, PATH_DATA_PREPROCESSED, PARTICIPANTS
 
-# TODO remove participant codes
 # TODO clean up code
 # TODO comment/document functions
 

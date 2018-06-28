@@ -4,7 +4,6 @@ import _pickle as pickle
 
 from config import PATH_DATA_PREPROCESSED, PATH_DATA_OUTPUT, PARTICIPANTS
 
-# TODO remove participant codes
 # TODO remove required response log file
 # TODO remove required physio log file
 # TODO generalize code better (e.g., conditions)
