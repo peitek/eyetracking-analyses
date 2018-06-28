@@ -4,6 +4,8 @@
 
 * Forked these analysis scripts from the original [eyelink-ogama repository](https://github.com/peitek/eyelink-ogama-connector)
 * Code cleanup
+* Added `RunPipeline.py` to run everything at once
+* Added sample data
 
 ## 0.3.0 (2018-06-28)
 
