@@ -9,12 +9,12 @@ import RestConditionOffsetAnalyzer
 
 from config import PARTICIPANTS
 
-SKIP_PREPROCESSING = False
+RUN_PREPROCESSING = False
 
 
 def main():
     # First, run all pre-processing (if requested)
-    if not SKIP_PREPROCESSING:
+    if RUN_PREPROCESSING:
         BlinkFinder.find_blinks_for_participants(PARTICIPANTS)
         FixationFinder.find_fixations_for_participants(PARTICIPANTS)
         PupilDilationFinder.extract_pupil_dilation_for_participants(PARTICIPANTS)

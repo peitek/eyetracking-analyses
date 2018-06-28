@@ -42,7 +42,8 @@ def analyze_rest_condition_offset(participants):
 
 def summarize_fixations_per_participant_and_rest(participants, all_fixations_x_per_rest_condition, axis, weighted):
     summarized_conditions_results = []
-    summarized_participants_results = [[None, None, None, None, None, None, None, None] for i in range(26)]
+    # TODO this is hardcoded to the amount of participants -> make dynamic
+    summarized_participants_results = [[None, None, None, None, None, None, None, None, None] for i in range(26)]
 
     for i, rest_condition in enumerate(all_fixations_x_per_rest_condition):
         print("\n##### Rest Condition: ", i + 1)

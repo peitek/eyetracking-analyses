@@ -33,7 +33,7 @@ Next, you can either run individual analyses or the whole pipeline via `RunPipel
 # Related Repositories
 
 * [EyeLink Ogama Connector](https://github.com/peitek/eyelink-ogama-connector)
-* Eye-Tracking Visualization Pipeline
+* [Eye-Tracking Visualization Pipeline](https://github.com/peitek/eyetracking-visualizations)
 
 
 # License #
