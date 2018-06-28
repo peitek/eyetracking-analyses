@@ -183,7 +183,7 @@ def write_dilation_per_snippet_participant(average_dilation_per_snippet_particip
 
 
 def analyze_each_frame_movement(participants, participant_id, pupil_dilation_over_time):
-    with open(join(PATH_DATA_PREPROCESSED, "fixations", participant_id + "_pupil_data_raw.pkl"), 'rb') as input:
+    with open(join(PATH_DATA_PREPROCESSED, "full", participant_id + "_pupil_data_raw.pkl"), 'rb') as input:
         eyetracking_data = pickle.load(input)
 
         print("\n## " + participant_id)
@@ -204,7 +204,7 @@ def analyze_each_frame_movement(participants, participant_id, pupil_dilation_ove
 
 
 def analyze_each_frame(participants, participant_id, pupil_dilation_over_time, pupil_dilation_per_condition, pupil_dilation_per_snippet_participant, pupil_dilation_per_snippet):
-    with open(join(PATH_DATA_PREPROCESSED, "fixations", participant_id + "_pupil_data_raw.pkl"), 'rb') as input:
+    with open(join(PATH_DATA_PREPROCESSED, "full", participant_id + "_pupil_data_raw.pkl"), 'rb') as input:
         eyetracking_data = pickle.load(input)
 
         print("\n## " + participant_id)

@@ -9,7 +9,7 @@ import RestConditionOffsetAnalyzer
 
 from config import PARTICIPANTS
 
-SKIP_PREPROCESSING = True
+SKIP_PREPROCESSING = False
 
 
 def main():

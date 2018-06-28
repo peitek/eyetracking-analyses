@@ -149,7 +149,7 @@ def extract_pupil_dilation_for_participants(participants):
         print("-> reading file: done!")
 
         # write fixations to file
-        with open(join(PATH_DATA_PREPROCESSED, "pupil_dilation", participant + "_pupil_data_raw.pkl"), 'wb') as output:
+        with open(join(PATH_DATA_PREPROCESSED, "full", participant + "_pupil_data_raw.pkl"), 'wb') as output:
             pickle.dump(pupil_dilation, output)
 
         print("-> writing file: done!")
