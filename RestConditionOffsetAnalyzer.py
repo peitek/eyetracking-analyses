@@ -15,8 +15,9 @@ fixation_cross_y = 514
 
 
 def analyze_rest_condition_offset(participants):
-    all_fixations_x_per_rest_condition = [[[],[],[],[],[],[],[],[]] for i in range(26)]
-    all_fixations_y_per_rest_condition = [[[],[],[],[],[],[],[],[]] for i in range(26)]
+    # TODO this is hardcoded to the amount of participants --> make it dynamic
+    all_fixations_x_per_rest_condition = [[[],[],[],[],[],[],[],[],[]] for i in range(26)]
+    all_fixations_y_per_rest_condition = [[[],[],[],[],[],[],[],[],[]] for i in range(26)]
 
     for participant in participants:
         [all_fixations_x_per_rest_condition, all_fixations_y_per_rest_condition] = analyze_fixations(participants, participant, all_fixations_x_per_rest_condition, all_fixations_y_per_rest_condition)

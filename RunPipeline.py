@@ -23,6 +23,7 @@ def main():
     AoiAnalyzer.run_aoi_analysis(PARTICIPANTS)
     BlinkAnalyzer.analyze_blinks_for_all_participants(PARTICIPANTS)
     PupilDilationAnalyzer.analyze_pupil_dilation_for_all_participants(PARTICIPANTS)
+    PupilDilationAnalyzer.analyze_pupil_dilation_movement_for_all_participants(PARTICIPANTS)
     RestConditionOffsetAnalyzer.analyze_rest_condition_offset(PARTICIPANTS)
 
     # Third, run secondary analyses
